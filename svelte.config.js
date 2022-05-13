@@ -12,6 +12,11 @@ const config = {
         adapter: adapter(),
 
         vite: {
+            optimizeDeps: {
+                exclude: ['stripe'],
+                esbuildOptions: {},
+            },
+
             plugins: [
                 nodePolyfills({
                     include: ['crypto', 'events', 'path', 'http', 'https'],
