@@ -15,6 +15,7 @@ const config = {
             plugins: [
                 nodePolyfills({
                     include: ['crypto', 'events', 'path', 'http', 'https'],
+                    exclude: null,
                 }),
             ],
         },
