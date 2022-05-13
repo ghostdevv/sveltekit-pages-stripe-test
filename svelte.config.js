@@ -1,3 +1,4 @@
+import { NodeModulesPolyfillPlugin } from '@esbuild-plugins/node-modules-polyfill';
 import nodePolyfills from 'rollup-plugin-polyfill-node';
 import adapter from '@sveltejs/adapter-auto';
 import preprocess from 'svelte-preprocess';
@@ -13,8 +14,10 @@ const config = {
 
         vite: {
             optimizeDeps: {
-                exclude: ['stripe'],
-                esbuildOptions: {},
+                esbuildOptions: {
+                    plugins: [NodeModulesPolyfillPlugin()],
+                    platform: 'node',
+                },
             },
 
             plugins: [
