@@ -14,6 +14,8 @@ const config = {
 
         vite: {
             optimizeDeps: {
+                disabled: false,
+                include: ['stripe'],
                 esbuildOptions: {
                     plugins: [NodeModulesPolyfillPlugin()],
                     platform: 'node',
