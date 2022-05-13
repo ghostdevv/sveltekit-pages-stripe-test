@@ -12,7 +12,11 @@ const config = {
         adapter: adapter(),
 
         vite: {
-            plugins: [nodePolyfills()],
+            plugins: [
+                nodePolyfills({
+                    include: ['crypto', 'events', 'path', 'http', 'https'],
+                }),
+            ],
         },
     },
 };

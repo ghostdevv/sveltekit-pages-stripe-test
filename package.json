@@ -13,7 +13,6 @@
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
-    "dotenv": "^16.0.1",
     "rollup-plugin-polyfill-node": "^0.9.0",
     "stripe": "^9.1.0",
     "svelte": "^3.44.0",
