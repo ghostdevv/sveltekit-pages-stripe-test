@@ -14,12 +14,12 @@ const config = {
 
         vite: {
             optimizeDeps: {
-                disabled: false,
-                include: ['stripe'],
-                esbuildOptions: {
-                    plugins: [NodeModulesPolyfillPlugin()],
-                    platform: 'node',
-                },
+                // disabled: false,
+                exclude: ['stripe'],
+                // esbuildOptions: {
+                //     plugins: [NodeModulesPolyfillPlugin()],
+                //     platform: 'node',
+                // },
             },
 
             plugins: [
