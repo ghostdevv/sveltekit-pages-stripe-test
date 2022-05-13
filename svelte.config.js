@@ -22,6 +22,25 @@ const config = {
                 // },
             },
 
+            build: {
+                rollupOptions: {
+                    plugins: [
+                        nodePolyfills({
+                            include: [
+                                'crypto',
+                                'events',
+                                'path',
+                                'http',
+                                'https',
+                            ],
+                            exclude: null,
+                        }),
+                    ],
+                },
+            },
+
+            resolve: {},
+
             plugins: [
                 nodePolyfills({
                     include: ['crypto', 'events', 'path', 'http', 'https'],
